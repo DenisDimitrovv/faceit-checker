@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FACEIT Profile Checker</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="logo">
+                <i class="fas fa-crosshairs"></i>
+                <h1>FACEIT Profile Checker</h1>
+            </div>
+            <p class="subtitle">Check FACEIT profiles using Steam IDs</p>
+        </header>
+
+        <main class="main-content">
+            <div class="search-section">
+                <div class="search-container">
+                    <div class="input-group">
+                        <input 
+                            type="text" 
+                            id="steamIdInput" 
+                            placeholder="Enter Steam Profile URL, ID, or custom name"
+                            class="search-input"
+                        >
+                        <button id="searchBtn" class="search-btn">
+                            <i class="fas fa-search"></i>
+                            Search
+                        </button>
+                    </div>
+                    <div class="help-text">
+                        <i class="fas fa-info-circle"></i>
+                        <span>e.g., https://steamcommunity.com/id/yourname</span>
+                    </div>
+                </div>
+            </div>
+
+            <div id="loadingSpinner" class="loading-spinner hidden">
+                <div class="spinner"></div>
+                <p>Searching FACEIT...</p>
+            </div>
+
+            <div id="errorMessage" class="error-message hidden"></div>
+
+            <div id="profileContainer" class="profile-container hidden">
+                <!-- Profile content will be inserted here -->
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2024 FACEIT Profile Checker. Powered by FACEIT API.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 
